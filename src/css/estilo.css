@@ -1,0 +1,235 @@
+body {
+  background-color: #000000;
+  overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites do elemento */
+}
+
+main::after {  /* Aplica um pseudo-elemento logo após o conteúdo do <main> */
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  min-height: 100vh;
+  width: 80vh;
+
+  background: linear-gradient(92deg, #000 25%, rgba(0, 0, 0, 0) 75%) no-repeat; /* Cria um fundo com um gradiente linear a 92 graus, indo de preto sólido (#000) até preto totalmente transparente (rgba(0,0,0,0)) */
+}
+
+main .personagem {
+  display: none;
+  height: 100vh;
+}
+
+main .personagem.selecionado {
+  display: block;
+}
+
+main .personagem .imagem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.conteudo {
+  position: absolute;
+  top: 0;
+  left: 120px;
+
+  display: flex; /* Ativa o Flexbox, permitindo organizar os elementos filhos com mais controle */
+  flex-direction: column; /* Alinha os elementos filhos em uma coluna (de cima para baixo) */
+  justify-content: center; /* Alinha os itens no eixo principal, mas só funciona se o display: flex (ou grid) estiver ativado */
+  height: 100vh; /* Define a altura do elemento como 100% da altura da tela visível (viewport) */
+  max-width: 380px; /* Limita a largura máxima do elemento a 380 pixels */
+  z-index: 1; /* Define a ordem de empilhamento do elemento. Elementos com z-index maior ficam "por cima" dos outros */
+}
+
+.conteudo .nome-personagem{
+  color: #ffffff;
+  font-size: 48px;
+  font-family: "Sercular One"; /* font-family: define a fonte usada no texto. Pode incluir fontes alternativas como fallback */
+  font-weight: 400; /* font-weight: define o peso (espessura) da fonte, deixando-a mais fina ou mais encorpada */
+  margin-bottom: 20px;
+}
+
+.conteudo .descricao {
+  color: #ffffff;
+  font-family: "Rubik";
+  font-size: 16px;
+  line-height: 24px; /* Define a altura da linha, controlando o espaçamento vertical entre as linhas do texto */
+}
+
+.botoes {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 180px;
+
+  display: flex; /* Ativa o Flexbox, permitindo organizar os elementos filhos com mais controle */
+  flex-direction: column; /* Alinha os elementos filhos em uma coluna (de cima para baixo) */
+  align-items: center; /* Alinha os itens ao centro no eixo cruzado (perpendicular ao eixo principal) */
+  justify-content: center; /* Alinha os itens no eixo principal, mas só funciona se o display: flex (ou grid) estiver ativado */
+  min-height: 100vh;
+  gap: 16px;
+}
+
+.botoes .botao {
+  border: none;
+  background-color: #000000;
+  width: 90px;
+  height: 90px;
+  cursor: pointer; /* Altera o cursor do mouse para uma mãozinha quando passar por cima do elemento */
+  transition: transform 0.3s ease; /* Aplica uma transição suave na transformação (como scale, rotate, translate) em 0.3 segundos com aceleração suave (ease) */
+  border-radius: 50%; /* Deixa o elemento totalmente arredondado, transformando ele em um círculo (se for quadrado) */
+}
+
+.botoes .botao img {
+  border-radius: 50%;
+}
+
+.botoes .botao.selecionado {
+  transform: scale(1.2); /* Aumenta o tamanho do elemento em 20%, mantendo o centro como ponto de referência */
+  box-shadow: 0 0 10px #D9D9D9; /* Cria uma sombra suave ao redor do elemento com cor cinza clara (#D9D9D9) */
+}
+
+.botoes .botao.cyberstorm.selecionado {
+  box-shadow: 0 0 10px #47ffc5;
+}
+
+.botoes .botao.codepixie.selecionado {
+  box-shadow: 0 0 10px #9747ff;
+}
+
+.botoes .botao.hexblade.selecionado {
+  box-shadow: 0 0 10px #ffa947;
+}
+
+.botoes .botao.neonpulse.selecionado {
+  box-shadow: 0 0 10px #e4309a;
+}
+
+.botoes .botao.codebreaker.selecionado {
+  box-shadow: 0 0 10px #fff047;
+}
+
+.footer {
+  height: 32px; /* Espaço padrão */
+}
+
+body {
+  background-color: #000000;
+  overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites do elemento */
+}
+
+main::after {  /* Aplica um pseudo-elemento logo após o conteúdo do <main> */
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  min-height: 100vh;
+  width: 80vh;
+
+  background: linear-gradient(92deg, #000 25%, rgba(0, 0, 0, 0) 75%) no-repeat; /* Cria um fundo com um gradiente linear a 92 graus, indo de preto sólido (#000) até preto totalmente transparente (rgba(0,0,0,0)) */
+}
+
+main .personagem {
+  display: none;
+  height: 100vh;
+}
+
+main .personagem.selecionado {
+  display: block;
+}
+
+main .personagem .imagem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.conteudo {
+  position: absolute;
+  top: 0;
+  left: 120px;
+
+  display: flex; /* Ativa o Flexbox, permitindo organizar os elementos filhos com mais controle */
+  flex-direction: column; /* Alinha os elementos filhos em uma coluna (de cima para baixo) */
+  justify-content: center; /* Alinha os itens no eixo principal, mas só funciona se o display: flex (ou grid) estiver ativado */
+  height: 100vh; /* Define a altura do elemento como 100% da altura da tela visível (viewport) */
+  max-width: 380px; /* Limita a largura máxima do elemento a 380 pixels */
+  z-index: 1; /* Define a ordem de empilhamento do elemento. Elementos com z-index maior ficam "por cima" dos outros */
+}
+
+.conteudo .nome-personagem{
+  color: #ffffff;
+  font-size: 48px;
+  font-family: "Sercular One"; /* font-family: define a fonte usada no texto. Pode incluir fontes alternativas como fallback */
+  font-weight: 400; /* font-weight: define o peso (espessura) da fonte, deixando-a mais fina ou mais encorpada */
+  margin-bottom: 20px;
+}
+
+.conteudo .descricao {
+  color: #ffffff;
+  font-family: "Rubik";
+  font-size: 16px;
+  line-height: 24px; /* Define a altura da linha, controlando o espaçamento vertical entre as linhas do texto */
+}
+
+.botoes {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 180px;
+
+  display: flex; /* Ativa o Flexbox, permitindo organizar os elementos filhos com mais controle */
+  flex-direction: column; /* Alinha os elementos filhos em uma coluna (de cima para baixo) */
+  align-items: center; /* Alinha os itens ao centro no eixo cruzado (perpendicular ao eixo principal) */
+  justify-content: center; /* Alinha os itens no eixo principal, mas só funciona se o display: flex (ou grid) estiver ativado */
+  min-height: 100vh;
+  gap: 16px;
+}
+
+.botoes .botao {
+  border: none;
+  background-color: #000000;
+  width: 90px;
+  height: 90px;
+  cursor: pointer; /* Altera o cursor do mouse para uma mãozinha quando passar por cima do elemento */
+  transition: transform 0.3s ease; /* Aplica uma transição suave na transformação (como scale, rotate, translate) em 0.3 segundos com aceleração suave (ease) */
+  border-radius: 50%; /* Deixa o elemento totalmente arredondado, transformando ele em um círculo (se for quadrado) */
+}
+
+.botoes .botao img {
+  border-radius: 50%;
+}
+
+.botoes .botao.selecionado {
+  transform: scale(1.2); /* Aumenta o tamanho do elemento em 20%, mantendo o centro como ponto de referência */
+  box-shadow: 0 0 10px #D9D9D9; /* Cria uma sombra suave ao redor do elemento com cor cinza clara (#D9D9D9) */
+}
+
+.botoes .botao.cyberstorm.selecionado {
+  box-shadow: 0 0 10px #47ffc5;
+}
+
+.botoes .botao.codepixie.selecionado {
+  box-shadow: 0 0 10px #9747ff;
+}
+
+.botoes .botao.hexblade.selecionado {
+  box-shadow: 0 0 10px #ffa947;
+}
+
+.botoes .botao.neonpulse.selecionado {
+  box-shadow: 0 0 10px #e4309a;
+}
+
+.botoes .botao.codebreaker.selecionado {
+  box-shadow: 0 0 10px #fff047;
+}
+
+.footer {
+  height: 32px; /* Espaço padrão */
+}
